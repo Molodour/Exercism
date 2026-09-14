@@ -1,0 +1,30 @@
+//
+// This is only a SKELETON file for the 'Difference Of Squares' exercise. It's been provided as a
+// convenience to get you started writing code faster.
+//
+
+export class Squares {
+  constructor(N) {
+    this.N = N;
+  }
+
+  get sumOfSquares() {
+    let sumSqr = 0;
+    for (let i = 1; i <= this.N; i++) {
+      sumSqr += i ** 2;
+    }
+    return sumSqr;
+  }
+
+  get squareOfSum() {
+    let sqrSum = 0;
+    for (let i = 1; i <= this.N; i++) {
+      sqrSum += i;
+    }
+    return sqrSum ** 2;
+  }
+
+  get difference() {
+    return this.squareOfSum - this.sumOfSquares;
+  }
+}
